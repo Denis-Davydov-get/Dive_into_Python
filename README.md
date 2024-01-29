@@ -1,6 +1,7 @@
 # Dive_into_Python
 
 A course of 15 lessons from installation to exceptions and OOP
+
 Материалы к лекциям:
 
 [Лекция 1. Основы Python](https://drive.google.com/file/d/1M5UObAbtreZQN7fA6i10KzMd6qYIhNw_/view?usp=sharing)
