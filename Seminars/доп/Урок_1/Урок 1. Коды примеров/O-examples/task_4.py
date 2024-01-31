@@ -1,5 +1,5 @@
 """
-Сложность: O(1)
+Сложность: O(1_base)
 Название: постоянное время (сложность - константа)
 
 Время работы алгоритма не зависит от объема входящих данных
@@ -11,8 +11,8 @@ second_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 
 def get_lst_func(lst):
-    length = len(lst)  # O(1)
-    return length  # O(1)
+    length = len(lst)  # O(1_base)
+    return length  # O(1_base)
 
 
 print(get_lst_func(first_lst))

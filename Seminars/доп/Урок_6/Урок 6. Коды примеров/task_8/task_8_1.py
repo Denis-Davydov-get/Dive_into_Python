@@ -27,4 +27,4 @@ if __name__ == '__main__':
     res, mem_diff = check_even_1(list(range(100000)))
     print(f"Выполнение заняло {mem_diff} Mib")
 
-# Выполнение заняло 2.2890625 Mib
+# Выполнение заняло 2_type_data.2890625 Mib

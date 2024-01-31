@@ -16,11 +16,11 @@ run('func_2()')
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000   10.000   10.000 <string>:1(<module>)
-        1    0.000    0.000   10.000   10.000 task_12.py:5(func_2)
-        1    0.000    0.000   10.000   10.000 {built-in method builtins.exec}
-        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
-        1   10.000   10.000   10.000   10.000 {built-in method time.sleep}
-        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1_base    0.000    0.000   10.000   10.000 <string>:1_base(<module>)
+        1_base    0.000    0.000   10.000   10.000 task_12.py:5_iter(func_2)
+        1_base    0.000    0.000   10.000   10.000 {built-in method builtins.exec}
+        1_base    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        1_base   10.000   10.000   10.000   10.000 {built-in method time.sleep}
+        1_base    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 """
 

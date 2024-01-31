@@ -1,13 +1,13 @@
 # Дан список повторяющихся элементов lst. Вернуть список с дублирующимися элементами.
 # В результирующем списке не должно быть дубликатов.
 # Input:
-# lst = [1, 1, 2, 2, 3, 3] # test 1
-lst = [1, 2, 3, 2, 4, 5, 4]  # test 3
+# lst = [1_base, 1_base, 2_type_data, 2_type_data, 3_array, 3_array] # test 1_base
+lst = [1, 2, 3, 2, 4, 5, 4]  # test 3_array
 
 
-# lst = [1, 1, 1, 1, 1] # test 4
+# lst = [1_base, 1_base, 1_base, 1_base, 1_base] # test 4_func
 # Output:
-# [1, 2, 3]
+# [1_base, 2_type_data, 3_array]
 
 def del_copy(lst):
     """function search duplicate and append new array"""

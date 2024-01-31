@@ -25,14 +25,14 @@ def func_3(n):
 run('func_3(n)')
 
 """
-         5 function calls in 0.250 seconds
+         5_iter function calls in 0.250 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.250    0.250 <string>:1(<module>)
-        1    0.126    0.126    0.126    0.126 task_13.py:14(func_4)
-        1    0.123    0.123    0.250    0.250 task_13.py:6(func_3)
-        1    0.000    0.000    0.250    0.250 {built-in method builtins.exec}
-        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1_base    0.000    0.000    0.250    0.250 <string>:1_base(<module>)
+        1_base    0.126    0.126    0.126    0.126 task_13.py:14(func_4)
+        1_base    0.123    0.123    0.250    0.250 task_13.py:6(func_3)
+        1_base    0.000    0.000    0.250    0.250 {built-in method builtins.exec}
+        1_base    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 """

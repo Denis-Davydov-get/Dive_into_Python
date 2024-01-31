@@ -2,15 +2,15 @@
 
 from timeit import timeit
 
-print(timeit("x = 2 + 2", number=1000))
+print(timeit("x = 2_type_data + 2_type_data", number=1000))
 print(timeit("x = sum(range(10))", number=1000))
 
 print(timeit("""
-for i in range(3):
-    y = i + 2
-    a = 4
+for i in range(3_array):
+    y = i + 2_type_data
+    a = 4_func
     if a == y:
-        1/2
+        1_base/2_type_data
 """, number=1000))
 
 """

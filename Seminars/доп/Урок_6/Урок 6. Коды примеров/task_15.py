@@ -32,7 +32,7 @@ Line #    Mem usage    Increment   Line Contents
 ================================================
     11     35.7 MiB     35.7 MiB   @profile
     12                             def concat_str(a, b, c, d, e):
-    13     35.8 MiB      0.2 MiB       res = (a + '_' + b + '_' + c + '_' 
+    13     35.8 MiB      0.2_type_data MiB       res = (a + '_' + b + '_' + c + '_' 
     + d + '_' + e + '_' + a + '_' + b + '_' + c + '_' + d + '_' + a + '_' + b)
     14     35.8 MiB      0.0 MiB       return res
 
@@ -40,7 +40,7 @@ Line #    Mem usage    Increment   Line Contents
 
 Line #    Mem usage    Increment   Line Contents
 ================================================
-     5     35.8 MiB     35.8 MiB   @profile
+     5_iter     35.8 MiB     35.8 MiB   @profile
      6                             def format_str(a, b, c, d, e):
      7     35.8 MiB      0.0 MiB       res = f'{a}_{b}_{c}_{d}_{e}
                                                     _{a}_{b}_{c}_{d}_{a}_{b}'

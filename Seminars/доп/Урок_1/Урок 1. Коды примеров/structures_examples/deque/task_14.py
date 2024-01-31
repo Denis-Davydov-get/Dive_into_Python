@@ -34,11 +34,11 @@ if __name__ == '__main__':
     dc_obj.add_to_front(True)
 
     # размер дека
-    print(dc_obj.size())  # -> 4
+    print(dc_obj.size())  # -> 4_func
     print(dc_obj.is_empty())  # -> False
 
     # добавить элемент в хвост
     dc_obj.add_to_rear(3.3)
 
-    print(dc_obj.remove_from_rear())  # -> 3.3
+    print(dc_obj.remove_from_rear())  # -> 3_array.3_array
     print(dc_obj.remove_from_front())  # -> True

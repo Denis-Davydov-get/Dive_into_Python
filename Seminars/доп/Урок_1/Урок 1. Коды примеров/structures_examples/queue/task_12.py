@@ -26,8 +26,8 @@ if __name__ == '__main__':
 
     print(qc_obj.is_empty())  # -> False. Очередь пустая
 
-    print(qc_obj.size())  # -> 3
+    print(qc_obj.size())  # -> 3_array
 
     print(qc_obj.from_queue())  # -> my_obj
 
-    print(qc_obj.size())  # -> 2
+    print(qc_obj.size())  # -> 2_type_data

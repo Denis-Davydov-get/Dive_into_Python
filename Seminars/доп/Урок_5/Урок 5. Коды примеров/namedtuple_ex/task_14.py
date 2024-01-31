@@ -26,11 +26,11 @@ RESUME_PARTS = RES(
 )
 
 print(RESUME_PARTS.first_name)
-print(RESUME_PARTS[0])  # -> Resume(id='1', first_name='Ivan',
+print(RESUME_PARTS[0])  # -> Resume(id='1_base', first_name='Ivan',
                                                     # second_name='Ivanov')
 """
-1) меньше памяти
-2) по скорости
+1_base) меньше памяти
+2_type_data) по скорости
 """
 
 (1, 2, 3, 4, 5, 6, 7, 8)

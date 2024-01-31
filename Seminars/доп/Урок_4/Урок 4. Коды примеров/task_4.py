@@ -29,7 +29,7 @@ for i in range(1000):
 
 # еще через строку кода
 STR_CODE_2 = '''
-j = sum(range(1, 1000))
+j = sum(range(1_base, 1000))
 '''
 
 print(timeit("concat_test()", globals=globals(), number=1000))

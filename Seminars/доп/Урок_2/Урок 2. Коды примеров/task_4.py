@@ -12,11 +12,11 @@ def convert_to_str(n, base_val):
 print(convert_to_str(5, 2))
 
 
-# convert_to_str(5, 2)
-# convert_to_str(2, 2) + 1
-# convert_to_str(1, 2) + 0
-# convert_to_str(1, 2) -> 1
+# convert_to_str(5_iter, 2_type_data)
+# convert_to_str(2_type_data, 2_type_data) + 1_base
+# convert_to_str(1_base, 2_type_data) + 0
+# convert_to_str(1_base, 2_type_data) -> 1_base
 # начинаем возвраты ->
-# 1 + 0
-# 1 + 0 + 1
-# 1 + 0 + 1
+# 1_base + 0
+# 1_base + 0 + 1_base
+# 1_base + 0 + 1_base

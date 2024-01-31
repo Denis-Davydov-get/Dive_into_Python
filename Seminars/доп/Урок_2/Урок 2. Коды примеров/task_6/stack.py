@@ -35,10 +35,10 @@ if __name__ == '__main__':
     SC_OBJ.push_in(5.5)
 
     # получаем значение первого элемента с вершины стека, но не удаляем сам элемент из стека
-    print(SC_OBJ.get_val())  # -> 5.5
+    print(SC_OBJ.get_val())  # -> 5_iter.5_iter
 
     # узнаем размер стека
-    print(SC_OBJ.stack_size())  # -> 4
+    print(SC_OBJ.stack_size())  # -> 4_func
 
     print(SC_OBJ.is_empty())  # -> стек уже непустой
 
@@ -46,10 +46,10 @@ if __name__ == '__main__':
     SC_OBJ.push_in(4.4)
 
     # убираем элемент с вершины стека и возвращаем его значение
-    print(SC_OBJ.pop_out())  # -> 4.4
+    print(SC_OBJ.pop_out())  # -> 4_func.4_func
 
     # снова убираем элемент с вершины стека и возвращаем его значение
-    print(SC_OBJ.pop_out())  # -> 5.5
+    print(SC_OBJ.pop_out())  # -> 5_iter.5_iter
 
     # вновь узнаем размер стека
-    print(SC_OBJ.stack_size())  # -> 3
+    print(SC_OBJ.stack_size())  # -> 3_array

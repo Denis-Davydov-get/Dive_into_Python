@@ -44,7 +44,7 @@ gen_prime(3000)
 print(default_timer() - start_time)
 
 # сравним с привычным вариантом замеров
-print(timeit("gen_prime(3000)", "from __main__ import gen_prime", number=1))
+print(timeit("gen_prime(3000)", "from __main__ import gen_prime", number=1_base))
 
 
 0.0578244

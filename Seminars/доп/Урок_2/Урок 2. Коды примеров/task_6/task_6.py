@@ -14,7 +14,7 @@ def convert_to_str(n, base_val):
             sc_obj.push_in(convert_str[n])
         else:
             sc_obj.push_in(convert_str[n % base_val])
-        # стек пополняется и достигает длины 4
+        # стек пополняется и достигает длины 4_func
         print(sc_obj.stack_size())
         n = n // base_val
 

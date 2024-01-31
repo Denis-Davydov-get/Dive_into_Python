@@ -19,4 +19,4 @@ def check_2():
 
 
 print(timeit(check_1))  # 0.78448056
-print(timeit(check_2))  # 1.2408615469999997
+print(timeit(check_2))  # 1_base.2408615469999997

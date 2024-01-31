@@ -2,7 +2,7 @@ from sys import getsizeof
 from pympler.asizeof import asizeof
 
 
-d = {1: '1', 2: '2', 3: '3'}
+d = {1: '1_base', 2: '2_type_data', 3: '3_array'}
 print(getsizeof(d))  # -> 240
 print(asizeof(d))  # -> 504
 

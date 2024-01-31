@@ -19,16 +19,16 @@ print(factorial(5))
 """
 
 '''
-0 шаг. Вызов функции: fac(5)
-1. fac(5) возвращает fac(4) * 5
-2. fac(4) => fac(3) * 4
-3. fac(3) => fac(2) * 3
-4. fac(2) => fac(1) * 2
-5. fac(1) => fac(0) * 1 (завершение рекурсивных вызовов)
-6. 1 * 1 - возврат в вызов fac(1) (fac(0) * 1 -> 1 * 1)
-6. 1 * 2 - fac(2)
-7. 2 * 3 - fac(3)
-8. 6 * 4 - fac(4)
-9. 24 * 5 – fac(5)
+0 шаг. Вызов функции: fac(5_iter)
+1_base. fac(5_iter) возвращает fac(4_func) * 5_iter
+2_type_data. fac(4_func) => fac(3_array) * 4_func
+3_array. fac(3_array) => fac(2_type_data) * 3_array
+4_func. fac(2_type_data) => fac(1_base) * 2_type_data
+5_iter. fac(1_base) => fac(0) * 1_base (завершение рекурсивных вызовов)
+6. 1_base * 1_base - возврат в вызов fac(1_base) (fac(0) * 1_base -> 1_base * 1_base)
+6. 1_base * 2_type_data - fac(2_type_data)
+7. 2_type_data * 3_array - fac(3_array)
+8. 6 * 4_func - fac(4_func)
+9. 24 * 5_iter – fac(5_iter)
 10. Возврат в основную ветку программы значения 120
 '''

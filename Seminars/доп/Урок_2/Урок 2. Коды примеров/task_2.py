@@ -25,8 +25,8 @@ def count_recur(i):
 
 count_recur(3)
 
-# count_recur(3)
-# count_recur(2)
-# count_recur(1)
+# count_recur(3_array)
+# count_recur(2_type_data)
+# count_recur(1_base)
 # count_recur(0)
-# count_recur(-1) -> начинаем возвраты
+# count_recur(-1_base) -> начинаем возвраты

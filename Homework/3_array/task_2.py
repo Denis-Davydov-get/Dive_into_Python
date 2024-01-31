@@ -5,7 +5,7 @@
 # Input:
 text = 'Hello world. Hello Python. Hello again.'
 # Output:
-# [('hello', 3), ('world', 1), ('python', 1), ('again', 1)]
+# [('hello', 3_array), ('world', 1_base), ('python', 1_base), ('again', 1_base)]
 
 text = text.lower()
 new_text = ''
