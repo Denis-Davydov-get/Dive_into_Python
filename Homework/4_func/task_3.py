@@ -73,7 +73,7 @@ def withdraw(amount):
     '''Снятие денег.'''
     global bank_account
     global operations
-    if amount * PERCENT_REMOVAL > MAX_REMOVAL:
+    if amount * PERCENT_REMOVAL > MAX_REMOVAL: # если сумма снятия с комиссией больше макс. возможной
         temp_percent_removal = MAX_REMOVAL
     elif amount * PERCENT_REMOVAL < MIN_REMOVAL:
         temp_percent_removal = MIN_REMOVAL
@@ -102,12 +102,9 @@ def exit():
         return operations
     return operations
 
+
 deposit(1000)
 withdraw(200)
 exit()
 
 print(operations)
-
-
-
-
