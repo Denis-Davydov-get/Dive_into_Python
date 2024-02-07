@@ -58,50 +58,66 @@ def check_multiplicity(count):  # готово
     return False
 
 
-def deposit(count):  # готово
-    ''' Пополнение счёта.'''
-    global bank_account
-    global operations
-    if check_multiplicity(count):
-        bank_account += count
-        operations.append(f"Пополнение карты на {count} у.е. Итого {bank_account} у.е.")
-        return operations
-    return f'Сумма должна быть кратной {MULTIPLICITY} у.е.'
+def check_multiplicity(amount):
+    """Проверка кратности суммы при пополнении и снятии.
+    Функция check_multiplicity(amount) проверяет, кратна ли сумма amount заданному множителю MULTIPLICITY."""
+    return True if amount % MULTIPLICITY == 0 else False
+
+
+def deposit(amount):
+    """Пополнение счёта. Функция позволяет клиенту пополнять свой счет на определенную сумму.
+    Пополнение счета возможно только на сумму, которая кратна MULTIPLICITY"""
+    if check_multiplicity(amount):
+        global bank_account
+        bank_account += amount
+        msg = f'Пополнение карты на {amount} у.е. Итого {bank_account} у.е.'
+        operations.append(msg)
+    else:
+        msg = 'Сумма должна быть кратной 50 у.е.'
+        print(msg)
+    return msg
 
 
 def withdraw(amount):
-    '''Снятие денег.'''
+    """Снятие денег
+    Функция withdraw(amount) позволяет клиенту снимать средства со счета. Сумма снятия также должна быть кратной
+MULTIPLICITY. При снятии средств начисляется комиссия в процентах от снимаемой суммы, которая может варьироваться
+ от MIN_REMOVAL до MAX_REMOVAL"""
+    commission = amount * PERCENT_REMOVAL
+    if commission < MIN_REMOVAL:
+        commission = MIN_REMOVAL
+    elif commission > MAX_REMOVAL:
+        commission = MAX_REMOVAL
+    totaly_summ = amount + commission
     global bank_account
-    global operations
-    if amount * PERCENT_REMOVAL > MAX_REMOVAL: # если сумма снятия с комиссией больше макс. возможной
-        temp_percent_removal = MAX_REMOVAL
-    elif amount * PERCENT_REMOVAL < MIN_REMOVAL:
-        temp_percent_removal = MIN_REMOVAL
+    if totaly_summ <= bank_account and check_multiplicity(amount):
+        bank_account -= totaly_summ
+        msg = f'Снятие с карты {amount} у.е. Процент за снятие {int(commission)} у.е.. Итого {int(bank_account)} у.е.'
+        operations.append(msg)
+    elif totaly_summ > bank_account and check_multiplicity(amount):
+        msg = f'Недостаточно средств. Сумма с комиссией {int(totaly_summ)} у.е. На карте {bank_account} у.е.'
+        operations.append(msg)
     else:
-        temp_percent_removal = amount * PERCENT_REMOVAL
-    if bank_account >= (amount + temp_percent_removal):
-        if check_multiplicity(amount):
-            bank_account -= amount + temp_percent_removal
-            operations.append(f'Снятие с карты {amount} у.е. Процент за снятие {temp_percent_removal // 1} у.е.. '
-                              f'Итого {bank_account // 1} у.е. Возьмите карту на которой {bank_account} у.е.')
-    else:
-        operations.append(
-            f'Недостаточно средств. Сумма с комиссией {(amount + temp_percent_removal) // 1} у.е. На карте '
-            f'{bank_account} у.е. Возьмите карту на которой {bank_account} у.е.')
+        msg = f'Недостаточно средств. Сумма с комиссией {int(totaly_summ)} у.е. На карте {bank_account} у.е.'
+        operations.append(msg)
+        msg = 'Сумма должна быть кратной 50 у.е.'
+        print(msg)
+    return msg
 
 
 def exit():
-    '''Завершение работы и вывод итоговой информации о состоянии счета и проведенных операциях'''
+    """Завершение работы и вывод итоговой информации о состоянии счета и проведенных операциях
+    Функция exit() завершает работу с банковским счетом. Перед завершением, если на счету больше RICHNESS_SUM,
+начисляется налог на богатство в размере RICHNESS_PERCENT процентов"""
     global bank_account
-    global operations
-    if RICHNESS_SUM < bank_account:
-        commission_rich = bank_account * RICHNESS_PERCENT
-        bank_account -= commission_rich
-        operations.append(
-            f'Вычтен налог на богатство {RICHNESS_PERCENT} в сумме {commission_rich} у.е. Итого {bank_account} у.е.')
-        return operations
-    return operations
-
+    if bank_account > RICHNESS_SUM:
+        rich_tax = bank_account * RICHNESS_PERCENT
+        bank_account -= rich_tax
+        msg = f'Вычтен налог на богатство {RICHNESS_PERCENT}% в сумме {rich_tax} у.е. Итого {bank_account} у.е.'
+        operations.append(msg)
+    msg = f'Возьмите карту на которой {(bank_account)} у.е.'
+    operations.append(msg)
+    return msg
 
 deposit(1000)
 withdraw(200)
